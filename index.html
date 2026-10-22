@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#101217">
+<title>Video Anatomy</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header id="top">
+  <div class="bar">
+    <strong class="logo">Video Anatomy</strong>
+    <span id="fileName" class="dim"></span>
+    <span class="spacer"></span>
+    <label class="btn primary" for="fileInput">Open file</label>
+    <input id="fileInput" type="file" accept="video/*,audio/*,.mp4,.mov,.m4v,.m4a,.3gp,.mp4a" hidden>
+  </div>
+  <nav id="tabs">
+    <button data-tab="structure" class="on">Structure</button>
+    <button data-tab="video">Video</button>
+    <button data-tab="audio">Audio</button>
+    <button data-tab="learn">Learn</button>
+  </nav>
+</header>
+
+<main>
+  <section id="landing" class="view on">
+    <div class="hero">
+      <h1>Look inside a video file</h1>
+      <p>Open an MP4, MOV or M4A file to explore its boxes byte by byte, see how frames are stored and how they depend on each other, and inspect macroblocks and audio frames. Everything runs in your browser; the file is never uploaded.</p>
+      <div class="row">
+        <label class="btn primary big" for="fileInput">Open a video</label>
+        <button class="btn big" id="demoBtn">Load demo file</button>
+      </div>
+      <p class="dim small">Supported: MP4 / MOV / M4V / M4A / 3GP, including fragmented MP4. Codecs: H.264 and HEVC video, AAC audio (other codecs show container info only).</p>
+      <div id="dropHint" class="dim small">You can also drop a file anywhere on this page.</div>
+    </div>
+  </section>
+
+  <section id="structure" class="view">
+    <div class="split" id="structSplit">
+      <div class="pane" id="treePane"><div id="tree"></div></div>
+      <div class="pane" id="detailPane"><div id="detail"></div></div>
+    </div>
+  </section>
+
+  <section id="video" class="view"><div id="videoView"></div></section>
+  <section id="audio" class="view"><div id="audioView"></div></section>
+  <section id="learn" class="view"><div id="learnView"></div></section>
+</main>
+
+<div id="toast"></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

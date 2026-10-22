@@ -66,7 +66,7 @@ FFmpeg's `doc/examples/extract_mvs.c`). All three need FFmpeg installed.
 The 11 H.264 test files in `tests/media` cover CABAC, CAVLC, B-pyramids,
 spatial and temporal direct, multiple slices, weighted prediction, 8×8
 transforms, 10-bit, monochrome, fragmented MP4 and Apple's VideoToolbox
-encoder. They match FFmpeg exactly on 233,000 macroblocks and 365,000 motion
+encoder. They match FFmpeg exactly on 235,100 macroblocks and 366,746 motion
 vectors. The first 15 s of Big Buck Bunny also match (331,200 MBs).
 
 `js/h264tables.js` (CABAC context tables, CAVLC codes) is generated from FFmpeg's
